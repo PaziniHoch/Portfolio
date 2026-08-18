@@ -8,6 +8,7 @@
 
 html {
     background-color: var(--cor-fundo);
+    scroll-behavior: smooth;
 }
 
 * {
@@ -22,6 +23,7 @@ body {
     background-color: var(--cor-fundo);
     max-width: 1280px;
     margin: 0 auto;
+
 }
 
 .flex {
@@ -31,15 +33,23 @@ body {
 /* -------HEADER--------- */
 header {
     background-color: var(--cor-fundo);
-    padding: 15px;
+    padding: 1px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
 }
 
 header a {
     display: inline-block;
     transition: transform 0.2s, color 0.2s;
+
 }
 
 header .menu-navegacao li a:hover {
@@ -60,10 +70,13 @@ header span {
 
 /* --------NAVEGAÇÃO-------- */
 
+
 header .menu-navegacao {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
+
+
 }
 
 header .menu-navegacao li a {
@@ -72,21 +85,20 @@ header .menu-navegacao li a {
     font-size: 1.5rem;
 }
 
-
 /*-----ESTILO DO TOPO DO SITE-------*/
 section.topo-do-site {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     padding: 40px 4%;
 }
 
 .topo-do-site .txt-topo-site {
-    margin-top: 120px;
-    align-self: start;
     display: grid;
     gap: 30px;
 }
 
 section.topo-do-site .flex {
-    align-items: center;
     justify-content: center;
     gap: 90px;
 
@@ -104,15 +116,18 @@ section.topo-do-site .flex {
     font-family: 'Poppins';
     font-size: 20px;
     font-weight: 300;
+    text-align: justify;
 
 }
 
 .topo-do-site .txt-topo-site a {
     justify-self: start;
+    display: flex;
+    align-items: center;
     font-weight: 600;
     color: var(--cor-texto);
     padding: 15px 40px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 2px solid var(--cor-destaque);
     transition: transform 0.2s, color 0.2s;
 }
@@ -124,7 +139,7 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-site img {
-    margin-top: 60px;
+
     width: 320px;
     height: 320px;
     object-fit: cover;
@@ -162,37 +177,47 @@ section.topo-do-site .flex {
 
 
 
-/*-----ESTILO CONTEUDO DO SITE-------*/
-.conteudo-site .sobre-mim {
-    padding: 40px 4%;
+/*-----ESTILO SOBRE MIM-------*/
+
+.sobre-mim .interface {
+    padding: 100px 4%;
     width: 800px;
     display: flex;
-    flex-direction: row-reverse;
 }
 
+.interface .img-sobre-mim img {
+    width: 200px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5%;
+    border: 3px solid var(--cor-destaque);
 
-.sobre-mim .txt-sobre-mim{
+}
+
+.interface .txt-sobre-mim {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-
-
-.sobre-mim .txt-sobre-mim h2{
+.interface .txt-sobre-mim h2 {
     color: var(--cor-destaque);
     font-family: 'Poppins';
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 20px;
+
 }
-.sobre-mim .txt-sobre-mim p {
+
+.interface .txt-sobre-mim p {
     color: var(--cor-texto);
     font-family: 'Poppins';
     font-size: 18px;
     font-weight: 300;
+    text-align: justify;
 }
-.sobre-mim .txt-sobre-mim a {
+
+.interface .txt-sobre-mim a {
     color: var(--cor-destaque);
     font-family: 'Poppins';
     font-size: 25px;
@@ -200,12 +225,99 @@ section.topo-do-site .flex {
     padding: 40px;
 }
 
-.sobre-mim .img-sobre-mim img {
-    width: 200px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10%;
-    border: 3px solid var(--cor-destaque);
-    
+
+/*-----ESTILO MEUS PROJETOS-------*/
+section.projetos {
+    padding: 100px 4%;
 }
 
+section.projetos .flex {
+    gap: 40px;
+    justify-content: center;
+}
+
+
+.projetos h2 {
+    color: var(--cor-texto);
+    font-family: 'Poppins';
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.projetos h2 span {
+    color: var(--cor-destaque);
+    font-family: 'Poppins';
+    font-size: 30px;
+    line-height: 40px;
+
+}
+
+.projetos .projetos-box {
+    background-color: var(--cor-fundo);
+    padding: 30px 1%;
+    border: 3px solid var(--cor-destaque);
+    border-radius: 20px;
+    margin-top: 25px;
+    transition: transform 0.2s, color 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    min-height: 500px;
+}
+
+.projetos .projetos-box:hover {
+    transform: scale(1.05);
+
+
+}
+
+.projetos-box img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+}
+
+.projetos-box h3 {
+    font-size: 16px;
+    font-family: 'Poppins';
+    color: var(--cor-texto);
+}
+
+.projetos-box h3 span {
+    display: block;
+    font-size: 13px;
+    font-family: 'Poppins';
+    color: var(--cor-texto);
+    margin-top: 3px;
+}
+
+.projetos-box p {
+    font-size: 12px;
+    font-family: 'Poppins';
+    color: var(--cor-texto);
+    text-align: justify;
+    margin-top: 5px;
+    min-height: 50px;
+}
+
+.projetos-box a {
+    color: var(--cor-texto);
+    font-size: 13px;
+    font-family: 'Poppins';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    border: 1px solid var(--cor-destaque);
+    font-weight: 200;
+    padding: 5px 10px;
+
+    margin-top: auto;
+    align-self: center
+}
