@@ -159,3 +159,53 @@ section.topo-do-site .flex {
         border-color: transparent;
     }
 }
+
+
+
+/*-----ESTILO CONTEUDO DO SITE-------*/
+.conteudo-site .sobre-mim {
+    padding: 40px 4%;
+    width: 800px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.sobre-mim .txt-sobre-mim{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.sobre-mim .txt-sobre-mim h2{
+    color: var(--cor-destaque);
+    font-family: 'Poppins';
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.sobre-mim .txt-sobre-mim p {
+    color: var(--cor-texto);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 300;
+}
+.sobre-mim .txt-sobre-mim a {
+    color: var(--cor-destaque);
+    font-family: 'Poppins';
+    font-size: 25px;
+    font-weight: 300;
+    padding: 40px;
+}
+
+.sobre-mim .img-sobre-mim img {
+    width: 200px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid var(--cor-destaque);
+    
+}
+
