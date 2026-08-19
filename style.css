@@ -178,53 +178,71 @@ section.topo-do-site .flex {
 
 
 /*-----ESTILO SOBRE MIM-------*/
-
-.sobre-mim .interface {
+.sobre-mim {
     padding: 100px 4%;
-    width: 800px;
-    display: flex;
+
 }
 
-.interface .img-sobre-mim img {
-    width: 200px;
-    height: 500px;
+.sobre-mim .flex {
+    align-items: center;
+    gap: 60px;
+
+}
+
+.sobre-mim .img-sobre-mim img {
+    width: 300px;
+    height: 450px;
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 10%;
     border: 3px solid var(--cor-destaque);
-
 }
 
-.interface .txt-sobre-mim {
+.sobre-mim .txt-sobre-mim {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
 }
 
-.interface .txt-sobre-mim h2 {
+.sobre-mim .txt-sobre-mim h2 {
+    margin-bottom: 20px;
     color: var(--cor-destaque);
     font-family: 'Poppins';
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
-    margin-bottom: 20px;
+    font-weight: 400;
 
 }
 
-.interface .txt-sobre-mim p {
+.sobre-mim .txt-sobre-mim h2 span {
+    color: var(--cor-texto);
+    display: block;
+}
+
+.sobre-mim .txt-sobre-mim p {
+    margin: 10px 0;
     color: var(--cor-texto);
     font-family: 'Poppins';
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300;
     text-align: justify;
 }
 
-.interface .txt-sobre-mim a {
-    color: var(--cor-destaque);
-    font-family: 'Poppins';
-    font-size: 25px;
-    font-weight: 300;
-    padding: 40px;
+.sobre-mim .txt-sobre-mim .botao-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    border: 0;
+    background-color: var(--cor-destaque);
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px 10px;
+
+    transition: transform 0.2s, color 0.2s;
 }
 
+.sobre-mim .txt-sobre-mim .botao-social button:hover {
+    transform: scale(1.20);
+}
 
 /*-----ESTILO MEUS PROJETOS-------*/
 section.projetos {
