@@ -43,7 +43,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-
 }
 
 header a {
@@ -69,14 +68,10 @@ header span {
 
 
 /* --------NAVEGAÇÃO-------- */
-
-
 header .menu-navegacao {
     display: flex;
     gap: 30px;
     align-items: center;
-
-
 }
 
 header .menu-navegacao li a {
@@ -180,7 +175,6 @@ section.topo-do-site .flex {
 /*-----ESTILO SOBRE MIM-------*/
 .sobre-mim {
     padding: 100px 4%;
-
 }
 
 .sobre-mim .flex {
@@ -338,4 +332,63 @@ section.projetos .flex {
 
     margin-top: auto;
     align-self: center
+}
+
+/*-----ESTILO FOOTER-------*/
+footer {
+    padding: 80px 4%;
+    margin-top: 100px;
+}
+
+footer .linha-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+}
+
+footer .linha-footer h4 {
+    color: var(--cor-texto);
+    font-size: 2rem;
+}
+
+footer .linha-footer h4 span {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+}
+
+footer .botao-social button {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    border: 0;
+    background-color: var(--cor-destaque);
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0px 5px;
+
+    transition: transform 0.2s, color 0.2s;
+}
+
+footer .botao-social button:hover {
+    transform: scale(1.1);
+}
+
+footer .linha-footer {
+    padding: 10px 0;
+}
+
+.borda {
+    border-top: 2px solid var(--cor-destaque);
+}
+
+footer .linha-footer p i {
+    color: var(--cor-destaque);
+    font-size: 20px;
+    padding-right: 6px;
+}
+
+footer .linha-footer p {
+    color: var(--cor-texto);
+    font-size: 20px;
 }
