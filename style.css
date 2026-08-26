@@ -12,8 +12,8 @@ html {
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
@@ -21,9 +21,6 @@ html {
 
 body {
     background-color: var(--cor-fundo);
-    max-width: 1280px;
-    margin: 0 auto;
-
 }
 
 .interface {
@@ -37,14 +34,15 @@ body {
 
 /* -------HEADER--------- */
 header {
-    padding: 5px 4%;
-    background-color: var(--cor-fundo);
-
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
+
+    width: 100%;
+    padding: 5px 4%;
+
+    background-color: var(--cor-fundo);
 }
 
 header>.interface {
@@ -54,6 +52,8 @@ header>.interface {
 }
 
 header a {
+    display: inline-block;
+
     transition: transform 0.2s, color 0.2s;
 }
 
@@ -63,8 +63,8 @@ header .menu-navegacao li a:hover {
 }
 
 header h1 {
-    color: var(--cor-texto);
     font-size: 3rem;
+    color: var(--cor-texto);
 }
 
 header span {
@@ -80,15 +80,17 @@ header .menu-navegacao {
 
 header .menu-navegacao li a {
     padding: 20px;
-    color: var(--cor-texto);
+
     font-size: 1.5rem;
+    color: var(--cor-texto);
 }
 
 /*-----ESTILO DO TOPO DO SITE-------*/
 section.topo-do-site {
-    min-height: 100vh;
     display: flex;
     align-items: center;
+
+    min-height: 100vh;
     padding: 40px 4%;
 }
 
@@ -104,30 +106,32 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .txt-topo-site h1 {
-    color: var(--cor-destaque);
     font-family: 'Poppins';
     font-size: 35px;
     line-height: 45px;
+    color: var(--cor-destaque);
 }
 
 .topo-do-site .txt-topo-site p {
-    color: var(--cor-texto);
     font-family: 'Poppins';
     font-size: 20px;
     font-weight: 300;
     text-align: justify;
-
+    color: var(--cor-texto);
 }
 
 .topo-do-site .txt-topo-site a {
-    justify-self: start;
     display: flex;
     align-items: center;
+    justify-self: start;
+
+    padding: 15px 40px;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 15px;
+
     font-weight: 600;
     color: var(--cor-texto);
-    padding: 15px 40px;
-    border-radius: 15px;
-    border: 2px solid var(--cor-destaque);
+
     transition: transform 0.2s, color 0.2s;
 }
 
@@ -138,12 +142,12 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-site img {
-
     width: 320px;
     height: 320px;
-    object-fit: cover;
-    border-radius: 50%;
     border: 3px solid var(--cor-destaque);
+    border-radius: 50%;
+
+    object-fit: cover;
 }
 
 /*EFEITO TYPEWRITTER*/
@@ -155,6 +159,7 @@ section.topo-do-site .flex {
     overflow: hidden;
     white-space: nowrap;
     border-right: 1px solid;
+
     animation: typing 3s steps(30) forwards, blink 1s step-end infinite;
 }
 
@@ -184,56 +189,57 @@ section.topo-do-site .flex {
 .sobre-mim .flex {
     align-items: center;
     gap: 60px;
-
 }
 
 .sobre-mim .img-sobre-mim img {
     width: 300px;
     height: 450px;
-    object-fit: cover;
-    border-radius: 10%;
     border: 3px solid var(--cor-destaque);
+    border-radius: 10%;
+
+    object-fit: cover;
 }
 
 .sobre-mim .txt-sobre-mim {
     display: flex;
     flex-direction: column;
-
 }
 
 .sobre-mim .txt-sobre-mim h2 {
     margin-bottom: 20px;
-    color: var(--cor-destaque);
+
     font-family: 'Poppins';
     font-size: 40px;
-    line-height: 40px;
     font-weight: 400;
-
+    line-height: 40px;
+    color: var(--cor-destaque);
 }
 
 .sobre-mim .txt-sobre-mim h2 span {
-    color: var(--cor-texto);
     display: block;
+    color: var(--cor-texto);
 }
 
 .sobre-mim .txt-sobre-mim p {
     margin: 10px 0;
-    color: var(--cor-texto);
+
     font-family: 'Poppins';
     font-size: 15px;
     font-weight: 300;
     text-align: justify;
+    color: var(--cor-texto);
 }
 
 .sobre-mim .txt-sobre-mim .botao-social button {
     width: 50px;
     height: 50px;
-    border-radius: 30%;
+    margin: 10px 10px;
     border: 0;
-    background-color: var(--cor-destaque);
+    border-radius: 30%;
+
     font-size: 30px;
     cursor: pointer;
-    margin: 10px 10px;
+    background-color: var(--cor-destaque);
 
     transition: transform 0.2s, color 0.2s;
 }
@@ -252,103 +258,103 @@ section.projetos .flex {
     justify-content: center;
 }
 
-
 .projetos h2 {
-    color: var(--cor-texto);
     font-family: 'Poppins';
     font-size: 30px;
     line-height: 40px;
     text-align: center;
-
+    color: var(--cor-texto);
 }
 
 .projetos h2 span {
-    color: var(--cor-destaque);
     font-family: 'Poppins';
     font-size: 30px;
     line-height: 40px;
-
+    color: var(--cor-destaque);
 }
 
 .projetos .projetos-box {
-    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+
+    width: 350px;
+    min-height: 500px;
+    margin-top: 25px;
     padding: 30px 1%;
     border: 3px solid var(--cor-destaque);
     border-radius: 20px;
-    margin-top: 25px;
-    transition: transform 0.2s, color 0.2s;
 
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    min-height: 500px;
+    background-color: var(--cor-fundo);
+
+    transition: transform 0.2s, color 0.2s;
 }
 
 .projetos .projetos-box:hover {
     transform: scale(1.05);
-
-
 }
 
 .projetos-box img {
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
 
+    object-fit: cover;
 }
 
 .projetos-box h3 {
-    font-size: 16px;
     font-family: 'Poppins';
+    font-size: 16px;
     color: var(--cor-texto);
 }
 
 .projetos-box h3 span {
     display: block;
-    font-size: 13px;
-    font-family: 'Poppins';
-    color: var(--cor-texto);
     margin-top: 3px;
+
+    font-family: 'Poppins';
+    font-size: 13px;
+    color: var(--cor-texto);
 }
 
 .projetos-box p {
-    font-size: 12px;
-    font-family: 'Poppins';
-    color: var(--cor-texto);
-    text-align: justify;
     margin-top: 5px;
     min-height: 50px;
+
+    font-family: 'Poppins';
+    font-size: 12px;
+    text-align: justify;
+    color: var(--cor-texto);
 }
 
 .projetos-box a {
-    color: var(--cor-texto);
-    font-size: 13px;
-    font-family: 'Poppins';
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border-radius: 20px;
-    border: 1px solid var(--cor-destaque);
-    font-weight: 200;
-    padding: 5px 10px;
+    align-self: center;
 
     margin-top: auto;
-    align-self: center
+    padding: 5px 10px;
+    border: 1px solid var(--cor-destaque);
+    border-radius: 20px;
+
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 200;
+    color: var(--cor-texto);
 }
 
 /*-----ESTILO FOOTER-------*/
 footer {
-    padding: 80px 4%;
     margin-top: 100px;
+    padding: 80px 4%;
 }
 
 footer .linha-footer {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
     align-items: flex-end;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 10px 0;
 }
 
 footer .linha-footer h4 {
@@ -357,19 +363,21 @@ footer .linha-footer h4 {
 }
 
 footer .linha-footer h4 span {
-    color: var(--cor-destaque);
     font-size: 2rem;
+    color: var(--cor-destaque);
 }
 
 footer .botao-social button {
     width: 40px;
     height: 40px;
-    border-radius: 30%;
+    margin: 0px 5px;
     border: 0;
-    background-color: var(--cor-destaque);
+    border-radius: 30%;
+
     font-size: 25px;
     cursor: pointer;
-    margin: 0px 5px;
+    background-color: var(--cor-destaque);
+
     transition: transform 0.2s, color 0.2s;
 }
 
@@ -377,21 +385,18 @@ footer .botao-social button:hover {
     transform: scale(1.1);
 }
 
-footer .linha-footer {
-    padding: 10px 0;
-}
-
 .borda {
     border-top: 2px solid var(--cor-destaque);
 }
 
 footer .linha-footer p i {
-    color: var(--cor-destaque);
-    font-size: 20px;
     padding-right: 6px;
+
+    font-size: 20px;
+    color: var(--cor-destaque);
 }
 
 footer .linha-footer p {
-    color: var(--cor-texto);
     font-size: 20px;
+    color: var(--cor-texto);
 }
