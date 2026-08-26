@@ -26,29 +26,35 @@ body {
 
 }
 
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
 .flex {
     display: flex;
 }
 
 /* -------HEADER--------- */
 header {
+    padding: 5px 4%;
     background-color: var(--cor-fundo);
-    padding: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
 }
 
-header a {
-    display: inline-block;
-    transition: transform 0.2s, color 0.2s;
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+header a {
+    transition: transform 0.2s, color 0.2s;
 }
 
 header .menu-navegacao li a:hover {
@@ -70,8 +76,6 @@ header span {
 /* --------NAVEGAÇÃO-------- */
 header .menu-navegacao {
     display: flex;
-    gap: 30px;
-    align-items: center;
 }
 
 header .menu-navegacao li a {
@@ -366,7 +370,6 @@ footer .botao-social button {
     font-size: 25px;
     cursor: pointer;
     margin: 0px 5px;
-
     transition: transform 0.2s, color 0.2s;
 }
 
