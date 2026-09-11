@@ -101,7 +101,7 @@ section.topo-do-site {
 
 section.topo-do-site .flex {
     justify-content: center;
-    gap: 90px;
+    gap: 50px;
 }
 
 .topo-do-site .txt-topo-site h1 {
@@ -226,6 +226,10 @@ section.topo-do-site .flex {
     font-size: 30px;
     cursor: pointer;
     background-color: var(--cor-destaque);
+
+    color: #000000;
+    -webkit-appearance: none;
+    appearance: none;
 
     transition: transform 0.2s, color 0.2s;
 }
@@ -364,6 +368,10 @@ footer .botao-social button {
     cursor: pointer;
     background-color: var(--cor-destaque);
 
+    color: #000000;
+    -webkit-appearance: none;
+    appearance: none;
+
     transition: transform 0.2s, color 0.2s;
 }
 
@@ -487,10 +495,20 @@ footer .linha-footer p {
     /* --- MENU RESPONSIVO --- */
     .btn-menu {
         display: flex;
+
+        position: fixed;
+        /* Faz o botão flutuar na tela */
+        top: 20px;
+        /* Distância do topo da tela */
+        right: 4%;
     }
 
     .overlay-menu {
         display: block;
+    }
+
+    header {
+        position: static;
     }
 
     header .menu-navegacao {
