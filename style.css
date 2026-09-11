@@ -152,6 +152,7 @@ section.topo-do-site .flex {
 /*EFEITO TYPEWRITTER*/
 .topo-do-site .typewritter {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .topo-do-site .typewritter h1 {
@@ -165,37 +166,6 @@ section.topo-do-site .flex {
         border-color: transparent;
     }
 }
-
-/* 
-.topo-do-site .typewritter {
-    display: flex;
-}
-
-.topo-do-site .typewritter h1 {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 1px solid;
-
-    animation: typing 3s steps(30) forwards, blink 1s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
- */
 
 /*-----ESTILO SOBRE MIM-------*/
 .sobre-mim {
@@ -415,4 +385,154 @@ footer .linha-footer p i {
 footer .linha-footer p {
     font-size: 20px;
     color: var(--cor-texto);
+}
+
+
+/* --------BOTÃO HAMBÚRGUER (mobile)-------- */
+.btn-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.btn-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--cor-texto);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-menu.ativo span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.btn-menu.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-menu.ativo span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* --------OVERLAY DO MENU (mobile)-------- */
+.overlay-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-menu.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ======================================================
+   RESPONSIVIDADE — MENU VIRA LATERAL A PARTIR DE 992px
+   ====================================================== */
+@media (max-width: 992px) {
+    .btn-menu {
+        display: flex;
+    }
+
+    .overlay-menu {
+        display: block;
+    }
+
+    header .menu-navegacao {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 1001;
+
+        flex-direction: column;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        padding: 100px 30px;
+        gap: 5px;
+
+        background-color: var(--cor-fundo);
+        border-left: 2px solid var(--cor-destaque);
+        transition: right 0.3s ease;
+    }
+
+    header .menu-navegacao.ativo {
+        right: 0;
+    }
+
+    header .menu-navegacao li a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* ======================================================
+   RESPONSIVIDADE — SEÇÕES EMPILHAM EM TELAS MENORES
+   ====================================================== */
+@media (max-width: 1175px) {
+    section.topo-do-site {
+        min-height: auto;
+        padding: 60px 4% 40px;
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .topo-do-site .txt-topo-site a {
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    .sobre-mim .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mim .txt-sobre-mim .botao-social {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .linha-footer {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .topo-do-site .img-topo-site img {
+        max-width: 220px;
+    }
+
+    .sobre-mim .img-sobre-mim img {
+        width: 220px;
+        height: 320px;
+    }
+
+    .projetos .projetos-box {
+        width: 100%;
+    }
+
+    header .menu-navegacao {
+        width: 85%;
+    }
 }
