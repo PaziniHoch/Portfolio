@@ -102,7 +102,6 @@ section.topo-do-site {
 section.topo-do-site .flex {
     justify-content: center;
     gap: 90px;
-
 }
 
 .topo-do-site .txt-topo-site h1 {
@@ -156,6 +155,23 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .typewritter h1 {
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* 
+.topo-do-site .typewritter {
+    display: flex;
+}
+
+.topo-do-site .typewritter h1 {
     overflow: hidden;
     white-space: nowrap;
     border-right: 1px solid;
@@ -179,7 +195,7 @@ section.topo-do-site .flex {
     }
 }
 
-
+ */
 
 /*-----ESTILO SOBRE MIM-------*/
 .sobre-mim {
