@@ -441,10 +441,8 @@ footer .linha-footer p {
     visibility: visible;
 }
 
-/* ======================================================
-   RESPONSIVIDADE — MENU VIRA LATERAL A PARTIR DE 992px
-   ====================================================== */
-@media (max-width: 992px) {
+/*RESPONSIVIDADE — MENU*/
+@media (max-width: 1175px) {
     .btn-menu {
         display: flex;
     }
@@ -482,10 +480,46 @@ footer .linha-footer p {
     }
 }
 
-/* ======================================================
-   RESPONSIVIDADE — SEÇÕES EMPILHAM EM TELAS MENORES
-   ====================================================== */
+
+/* RESPONSIVIDADE GERAL (TABLETS E CELULARES)*/
 @media (max-width: 1175px) {
+
+    /* --- MENU RESPONSIVO --- */
+    .btn-menu {
+        display: flex;
+    }
+
+    .overlay-menu {
+        display: block;
+    }
+
+    header .menu-navegacao {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 1001;
+        flex-direction: column;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        padding: 100px 30px;
+        gap: 5px;
+        background-color: var(--cor-fundo);
+        border-left: 2px solid var(--cor-destaque);
+        transition: right 0.3s ease;
+    }
+
+    header .menu-navegacao.ativo {
+        right: 0;
+    }
+
+    header .menu-navegacao li a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
+    }
+
+    /* --- TOPO DO SITE --- */
     section.topo-do-site {
         min-height: auto;
         padding: 60px 4% 40px;
@@ -502,9 +536,19 @@ footer .linha-footer p {
         margin: 0 auto;
     }
 
+    /* Imagem do topo */
+    .topo-do-site .img-topo-site img {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    /* --- SOBRE MIM --- */
     .sobre-mim .flex {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
     }
 
     .sobre-mim .txt-sobre-mim .botao-social {
@@ -512,26 +556,60 @@ footer .linha-footer p {
         justify-content: center;
     }
 
+    /* Imagem do sobre mim */
+    .sobre-mim .img-sobre-mim img {
+        max-width: 260px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* --- PROJETOS --- */
+    .projetos .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* card */
+    .projetos .projetos-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* --- FOOTER*/
+    footer {
+        margin-top: 60px;
+        padding: 40px 4%;
+    }
+
     footer .linha-footer {
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         text-align: center;
+        gap: 25px;
+
+    }
+}
+
+/* --- AJUSTES (CELULARES) --- */
+@media (max-width: 768px) {
+    .topo-do-site .typewritter h1 {
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
+
+    .topo-do-site .txt-topo-site h1 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .topo-do-site .img-topo-site img {
-        max-width: 220px;
-    }
-
-    .sobre-mim .img-sobre-mim img {
-        width: 220px;
-        height: 320px;
-    }
-
-    .projetos .projetos-box {
-        width: 100%;
-    }
-
     header .menu-navegacao {
         width: 85%;
     }
